@@ -1,0 +1,55 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: another authentication Response
+@enduml
+
+@startuml
+class Item {
+    - int id
+    - String name
+    - double price
+    + Item(int id, String name, double price)
+    + int getId()
+    + String getName()
+    + double setPrice()
+    + double getPrice()
+    + void showDetails()
+}
+
+class Album {
+    - String artist
+    + Album(int id, String name, double price, String artist)
+    + String getArtist()
+    + void showDetails() {override}
+}
+
+class Movie {
+    - String director
+    - String actor
+    + Movie(int id, String name, double price, String director, String actor)
+    + String getDirector()
+    + String getActor()
+    + void printDetails() {override}
+}
+
+class Book {
+    - String author
+    - String isbn
+    + Book(int id, String name, double price, String author, String isbn)
+    + String getAuthor()
+    + String getIsbn()
+    + void printDetails() {override}
+}
+
+Item <|-- Album
+Item <|-- Movie
+Item <|-- Book
+
+@enduml

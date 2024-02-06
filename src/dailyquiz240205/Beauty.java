@@ -2,17 +2,16 @@ package dailyquiz240205;
 
 import java.math.BigDecimal;
 
-public class Beauty extends Product {
-    Beauty(String name, BigDecimal price, double weight) {
-        super(name, price, weight);
-    }
+    public class Beauty extends Product {
+        public Beauty(String name, BigDecimal price, double weight) {
+            super(name, price, weight);
+        }
 
-    public BigDecimal getPrice(BigDecimal price){
-        return price;
-    }
+        public BigDecimal getPrice() {
+            return price;
+        }
 
-    public double getWeight(double weight){
-        return weight;
-    }
-
+        public double getWeight() {
+            return weight;
+        }
 }

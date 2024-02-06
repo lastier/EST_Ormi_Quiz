@@ -3,14 +3,16 @@ package dailyquiz240205;
 import java.math.BigDecimal;
 
 public class Cart {
+
     private Product[] products;
 
-    public Cart(WeeklyQuiz02_Anaswer_BigDecimal.Product[] products){
+    public Cart(Product[] products) {
         this.products = products;
     }
-    public int getTotalPrice() {
+
+    public BigDecimal getTotalPrice() {
         BigDecimal total = BigDecimal.ZERO;
-        for (WeeklyQuiz02_Anaswer_BigDecimal.Product product : products) {
+        for (Product product : products) {
             total = total.add(product.price);
         }
         return total;
@@ -18,8 +20,7 @@ public class Cart {
 
     public double getTotalWeight() {
         double weight = 0;
-        for (WeeklyQuiz02_Anaswer_BigDecimal.Product product : products) {
-//            weight = weight + product.weight;
+        for (Product product : products) {
             weight += product.weight;
         }
         return weight;

@@ -2,13 +2,11 @@ package WeeklyQuiz240208;
 
 public class BusinessContact extends Contact{
     private String company;
+    public BusinessContact(){
 
-    public BusinessContact(String name, String phoneNumber, String company) {
-        super(name, phoneNumber);
-        this.company = company;
     }
 
-    public String getCompany() {
+    public String getCompany(){
         return company;
     }
 
@@ -16,9 +14,7 @@ public class BusinessContact extends Contact{
         this.company = company;
     }
 
-    @Override
-    public String toString() {
-        return "BusinessContact{" +
-                "name='" + getName() + '\'' + ", phoneNumber='" + getPhoneNumber() + '\'' + ", company='" + company + '\'' + '}';
+    public String toString(){
+        return "Contacts "+"Name : "+getName()+" PhoneNumber : "+getPhoneNumber()+" Company : "+company;
     }
 }

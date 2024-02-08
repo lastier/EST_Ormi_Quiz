@@ -1,6 +1,6 @@
 package WeeklyQuiz240208;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Contact {
     private String name;

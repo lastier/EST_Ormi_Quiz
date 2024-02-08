@@ -4,28 +4,16 @@ import java.util.*;
 
 
 public class AddressBook {
-    private List<Contact> contacts = new ArrayList<>();
+    private List<ContactsPractice.Contact> list = new ArrayList<>();
 
-    public void addContact(Contact contact) {
-        contacts.add(contact);
-    }
+    public static void main(String[] args) {
 
-    public void removeContact(Contact contact) {
-        contacts.remove(contact);
-    }
+        ContactsPractice.Contact contact = new ContactsPractice.Contact();
+        Contact businessContact = new BusinessContact();
 
-    public Contact searchContact(String name) {
-        for (Contact contact : contacts) {
-            if (contact.getName().equals(name)) {
-                return contact;
-            }
-        }
-        return null;
-    }
+        contact.setName("쿠로미");
+        contact.setPhoneNumber("010-1234-5678");
+        System.out.println(contact);
 
-    public void displayContacts() {
-        for (Contact contact : contacts) {
-            System.out.println(contact);
-        }
     }
 }
